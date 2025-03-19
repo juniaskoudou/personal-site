@@ -1,23 +1,22 @@
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
-import { MessageCircleDashed } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import Image from "next/image"
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full max-w-[1080px] mx-auto">
       <main className="mx-auto mt-[256px] mb-[100px]">
-        <div className="max-w-[1280px] mx-auto flex flex-col gap-14">
+        <div className="mx-auto flex flex-col gap-14">
           <div className="flex flex-col gap-11 justify-start items-start">
             <div className="flex flex-col gap-4 justify-start items-start">
-              <h1 className="text-6xl font-normal text-foreground tracking-tight">
+              <h1 className="text-6xl font-normal text-primary tracking-tight">
                 Hey, I&apos;m Junias K.
               </h1>
-              <p className="font-mono font-light uppercase text-foreground/85 text-sm leading-relaxed">
-                Product Designer - Curently @ DATADOG 
+                <p className="font-mono font-light uppercase text-foreground/85 text-sm leading-relaxed">
+                Product Designer
                 <br />
-                + Casual Photographe & Vibe Coder 
+                + Casual Photographe
                 <br />
                 + Based Paris, France
               </p>
@@ -28,45 +27,55 @@ export default function Home() {
                 Send an email 
               </Button>
               <Button size="icon" variant="secondary"> 
-                <MessageCircleDashed /> 
+                <Linkedin /> 
               </Button>
               <Button size="icon" variant="secondary"> 
-                <MessageCircleDashed /> 
+                <Instagram /> 
               </Button>
             </div>
             
 
           </div>
 
-          <div className="flex gap-9 justify-start items-center w-full">
-            {[
-              "I love about crafting aesthetic and highly functional software and apps. I believe that creativity and consistency are key to creating meaningful experiences.",
-              "I have always been interested in coding. As a self-taught designer, I actually came across programing first back in 2013, years before learning product design.",
-              "In late 2023, I started investing in my passion for photography. I quickly fell in love with Fujifilm cameras, and the journey has been incredible so far."
-            ].map((text, i) => (
-              <p key={i} className="text-foreground/85 text-md w-full font-light">
-                {text}
-              </p>
-            ))}
+          <div className="w-full flex flex-col space-y-6 text-primary text-[20px] font-light  text-justify tracking-tight">
+            <p>
+              Welcome to my digital space. Here you&apos;ll find my design project,  photos and thoughts on various topics. 
+            </p>
+            <p>
+            As for me, I am passionate about design and tech in general. I came across programming and design in high school back in 2012. Started with coding in visual basic for windows apps, I built stuff like this or this. Then I discover graphics design, UI design and video editing.
+            </p>
+            <p>
+            My family and I live in Paris, but I was born and raise in Abidjan, Côte d&apos;Ivoire. I moved to France in 2021 to complete my education in business and marketing (nothing to do with design right?).
+            </p>
+            <p>
+            I love  crafting aesthetic and highly functional web software and mobile apps. I believe that creativity, combined with consistency and iteration, is key to creating meaningful experiences for humans.
+            </p>
+            <p>
+            In late 2023, I started investing in my passion for photography. I quickly fell in love with Fujifilm cameras and their custom recipes as they allow me to shoot with little to no post-editing. The journey so far has been incredible.
+            </p>
+            
           </div>
         </div>
 
-        <div className="max-w-[1392px] mx-auto mt-[100px]">
+        <div className="mt-[100px] flex flex-col gap-4 justify-start items-center">
           <AspectRatio ratio={16 / 9} className="bg-muted">
             <Image
-              src="/MAAT-Lisbone.png"
-              alt="Photo by Drew Beamer"
+              src="/DSCF7591.JPG"
+              alt="Chasing Magic - Lisboa, Portugal - Junias K."
               fill
+              className="object-cover"
             />
           </AspectRatio>
-
+          <span className="text-xs text-primary font-mono font-normal uppercase tracking-tight text-center">
+            Chasing Magic - Lisboa, Portugal
+          </span>
         </div>
       </main>
-      <footer className="w-[1392px] mx-auto border-t border-primary/20 py-4 flex justify-between items-center">
+      <footer className="border-t border-primary py-2 mb-5 flex justify-between items-center text-primary text-xs font-normal tracking-tight">
         <p>
           &copy; {new Date().getFullYear()} Junias.
         </p>
-        <p>v 0.18.03.24</p>
+        <p>v0.0.1</p>
       </footer>
     </div>
 
