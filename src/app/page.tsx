@@ -92,7 +92,7 @@ export default function Home() {
           <p>
             &copy; {new Date().getFullYear()} Junias.
           </p>
-          <p>v0.0.1</p>
+          <p>v0.1</p>
         </footer>
       </div>
     </div>
