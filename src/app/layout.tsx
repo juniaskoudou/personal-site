@@ -14,9 +14,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Junias Koudou",
-  description: "Product Designer + Casual Photographer",
-};
+  title: {
+    default: "Junias K. | Product Designer & Photographer",
+    template: "%s | Junias K."
+  },
+  description: "Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics.",
+  
+  metadataBase: new URL('https://iamjunias.com'),
+  
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://iamjunias.com',
+    siteName: 'Junias K.',
+    title: "Junias K. | Product Designer & Photographer",
+    description: "Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics.",
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Junias K. - Product Designer & Photographer',
+      }
+    ],
+  },
+  
+  // Twitter
+  twitter: {
+    card: 'summary_large_image',
+    title: "Junias K. | Product Designer & Photographer",
+    description: "Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics.",
+    images: ['/og-image.jpg'],
+  },
+  
+  // Icons
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  
+  // Keywords
+  keywords: ['product design', 'UI/UX', 'photography', 'Fujifilm', 'web development', 'Paris designer'],
+  
+}
 
 export default function RootLayout({
   children,

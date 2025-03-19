@@ -56,7 +56,7 @@ export default function Home() {
 
             <div className="w-full flex flex-col space-y-4 sm:space-y-6 text-primary/70 sm:text-[20px] text-sm font-light  text-justify tracking-tight">
               <p>
-                Welcome to my digital space. Here you&apos;ll find my design project,  photos and thoughts on various topics. 
+                Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics. 
               </p>
               <p>
               As for me, I am passionate about design and tech in general. I came across programming and design in high school back in 2012. Started with coding in visual basic for windows apps, I built stuff like this or this. Then I discover graphics design, UI design and video editing.
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="sm:mt-25 mt-10 flex flex-col gap-4 justify-start items-center">
+          <div className="sm:mt-25 mt-10 flex flex-col sm:gap-4 gap-2 justify-start items-center">
             <AspectRatio ratio={16 / 9} className="bg-muted">
               <Image
                 src="/DSCF7591.JPG"
