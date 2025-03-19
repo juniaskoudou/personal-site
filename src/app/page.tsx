@@ -19,7 +19,7 @@ export default function Home() {
                   <p className="font-mono font-light uppercase text-foreground/85 text-sm sm:text-lg leading-relaxed">
                   Product Designer
                   <br />
-                  + Casual Photographe
+                  + Casual Photographer
                   <br />
                   + Based Paris, France
                 </p>
@@ -59,7 +59,7 @@ export default function Home() {
                 Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics. 
               </p>
               <p>
-              As for me, I am passionate about design and tech in general. I came across programming and design in high school back in 2012. Started with coding in visual basic for windows apps, I built stuff like this or this. Then I discover graphics design, UI design and video editing.
+              As for me, I am passionate about design and tech in general. I came across programming and design in high school back in 2012. Started with coding in visual basic for windows apps, then I discover graphics design, UI design and video editing.
               </p>
               <p>
               My family and I live in Paris, but I was born and raise in Abidjan, Côte d&apos;Ivoire. I moved to France in 2021 to complete my education in business and marketing (nothing to do with design right?).
