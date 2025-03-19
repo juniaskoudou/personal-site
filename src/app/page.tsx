@@ -1,3 +1,5 @@
+"use client"
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Instagram } from "lucide-react";
@@ -23,13 +25,27 @@ export default function Home() {
             </div>
 
             <div className="flex gap-2">
-              <Button> 
+              <Button className="cursor-pointer" onClick={() => window.open('mailto:juniashk@gmail.com', '_blank')}> 
                 Send an email 
               </Button>
-              <Button size="icon" variant="secondary"> 
+              <Button 
+                className="cursor-pointer" 
+                size="icon" 
+                variant="secondary" 
+                onClick={() => {
+                  window.open('https://www.linkedin.com/in/Juniask/', '_blank', 'noopener,noreferrer');
+                }}
+              > 
                 <Linkedin /> 
               </Button>
-              <Button size="icon" variant="secondary"> 
+              <Button 
+                className="cursor-pointer" 
+                size="icon" 
+                variant="secondary" 
+                onClick={() => {
+                  window.open('https://www.instagram.com/junias.jpeg/', '_blank', 'noopener,noreferrer');
+                }}
+              > 
                 <Instagram /> 
               </Button>
             </div>
