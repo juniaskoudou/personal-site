@@ -113,11 +113,13 @@ export default function Home() {
                 <h1 className="sm:text-6xl text-4xl font-semibold text-primary tracking-tighter">
                   Hey, I&apos;m Junias K.
                 </h1>
+   
                 <div className="font-mono font-normal uppercase text-foreground/85 text-sm sm:text-lg leading-relaxed intro-text flex flex-col">
                   <span>Product Designer</span>
                   <span>+ Casual Photographer</span>
                   <span>+ Based Paris, France</span>
                 </div>
+
               </div>
 
               <div className="flex gap-2 button-group">
@@ -163,11 +165,12 @@ export default function Home() {
                 Welcome to my digital space. Here you&apos;ll find my design project, photos and
                 thoughts on various topics.
               </p>
+
               <p className="bio-paragraph">
                 As for me, I am passionate about design and tech in general. I came across
                 programming and design in high school back in 2012. Started with coding in visual
                 basic for windows apps, then I discover graphics design, UI design and video editing.
-              </p>
+        
               <p className="bio-paragraph">
                 I live in Paris, but I was born and raise in Abidjan, Côte
                 d&apos;Ivoire. I moved to France in 2021 to complete my education in business and
