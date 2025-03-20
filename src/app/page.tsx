@@ -10,13 +10,13 @@ export default function Home() {
     <div className="w-full min-h-screen">
       <div className="max-w-[1080px] mx-auto px-4">
         <main className="mt-[100px] sm:mt-[256px] sm:mb-25 mb-10">
-          <div className="flex flex-col sm:gap-14 gap-8 w-full">
+          <div className="flex flex-col sm:gap-14 gap-8 w-full max-w-[520px] mx-auto">
             <div className="flex flex-col sm:gap-11 gap-6 justify-start items-start">
-              <div className="flex flex-col gap-4 justify-start items-start">
-                <h1 className="sm:text-6xl text-5xl font-normal text-primary tracking-tight">
+              <div className="flex flex-col gap-3 sm:gap-4 justify-start items-start">
+                <h1 className="sm:text-6xl text-4xl font-semibold text-primary tracking-tighter">
                   Hey, I&apos;m Junias K.
                 </h1>
-                  <p className="font-mono font-light uppercase text-foreground/85 text-sm sm:text-lg leading-relaxed">
+                  <p className="font-mono font-normal uppercase text-foreground/85 text-sm sm:text-lg leading-relaxed">
                   Product Designer
                   <br />
                   + Casual Photographer
@@ -54,7 +54,7 @@ export default function Home() {
 
             </div>
 
-            <div className="w-full flex flex-col space-y-4 sm:space-y-6 text-primary/70 sm:text-[20px] text-sm font-light  text-justify tracking-tight">
+            <div className="w-full flex flex-col space-y-4 sm:space-y-6 text-primary sm:text-[26px] text-lg font-medium tracking-tight">
               <p>
                 Welcome to my digital space. Here you&apos;ll find my design project, photos and thoughts on various topics. 
               </p>
@@ -92,7 +92,7 @@ export default function Home() {
           <p>
             &copy; {new Date().getFullYear()} Junias.
           </p>
-          <p>v0.1</p>
+          <p>v0.2</p>
         </footer>
       </div>
     </div>
