@@ -65,22 +65,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="sm:max-w-[380px] w-full mx-auto px-6 py-8">
       <head>
         <script defer data-domain="iamjunias.com" src="https://plausible.io/js/script.js"></script>
       </head>
+      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-stone-100` }
       >
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
             disableTransitionOnChange
           >
             {children}
           </ThemeProvider>
       </body>
+      <footer className=" py-2 mb-5 flex justify-between items-center tracking-tight max-w-[380px] mx-auto">
+          <span className="font-mono uppercase font-medium text-[10px] text-stone-500">&copy; Junias {new Date().getFullYear()} </span>
+          <span className="font-mono uppercase font-medium text-[10px] text-stone-500 bg-stone-200/50 border border-stone-300/50 rounded-full px-2 py-[2px]">v0.3</span>
+        </footer>
     </html>
   );
 }
