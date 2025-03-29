@@ -12,6 +12,11 @@ export default function Home() {
   return (
         <main className="flex flex-col gap-6">
           <section className="flex flex-col gap-4 text-stone-950">
+            <div className="bg-[url('/HeaderImage.png')] bg-cover bg-center h-[80px] relative">
+              <span className="font-mono uppercase font-medium text-[10px] text-white bg-black/30 px-2 py-1 absolute bottom-2 left-2">
+                Skytteholm, Sweden
+              </span>
+            </div>
             <h1 className="font-[Newsreader] sm:text-xl text-lg font-medium italic tracking-tight">
               Welcome to my digital space
             </h1>

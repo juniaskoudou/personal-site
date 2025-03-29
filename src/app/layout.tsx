@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Caveat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -10,6 +11,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
 });
 
@@ -65,26 +71,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="sm:max-w-[380px] w-full mx-auto px-6 py-8">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} sm:max-w-[380px] w-full mx-auto px-6`}>
       <head>
         <script defer data-domain="iamjunias.com" src="https://plausible.io/js/script.js"></script>
       </head>
       
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-stone-100` }
+        className="antialiased bg-stone-100 min-h-screen flex flex-col pt-8"
       >
         <ThemeProvider
             attribute="class"
             defaultTheme="light"
             disableTransitionOnChange
           >
-            {children}
+            <main className="flex-grow">
+              {children}
+            </main>
+            <footer className="py-2 flex justify-between items-center tracking-tight max-w-[380px] mx-auto">
+              <span className="font-mono uppercase font-medium text-[10px] text-stone-500">&copy; Junias {new Date().getFullYear()} </span>
+              <span className="font-mono uppercase font-medium text-[10px] text-stone-500 bg-stone-200/50 border border-stone-300/50 rounded-full px-2 py-[2px]">v0.3</span>
+            </footer>
           </ThemeProvider>
       </body>
-      <footer className=" py-2 mb-5 flex justify-between items-center tracking-tight max-w-[380px] mx-auto">
-          <span className="font-mono uppercase font-medium text-[10px] text-stone-500">&copy; Junias {new Date().getFullYear()} </span>
-          <span className="font-mono uppercase font-medium text-[10px] text-stone-500 bg-stone-200/50 border border-stone-300/50 rounded-full px-2 py-[2px]">v0.3</span>
-        </footer>
     </html>
   );
 }
