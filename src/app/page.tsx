@@ -114,7 +114,7 @@ export default function Home() {
                   Hey, I&apos;m Junias K.
                 </h1>
                 <div className="font-mono font-normal uppercase text-foreground/85 text-sm sm:text-lg leading-relaxed intro-text flex flex-col">
-                  <span>Product Designer</span>
+                  <span>Product Designer @ Datadog</span>
                   <span>+ Casual Photographer</span>
                   <span>+ Based Paris, France</span>
                 </div>
