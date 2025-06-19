@@ -6,6 +6,22 @@ import { Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { animate, stagger } from "motion";
 import { useEffect, useRef } from "react";
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+    applicationId: '4248c229-1d15-495e-9dac-7937edbbba34',
+    clientToken: 'pubfd01821e68c40994e41ec72f04873fda',
+    // `site` refers to the Datadog site parameter of your organization
+    // see https://docs.datadoghq.com/getting_started/site/
+    site: 'datadoghq.com',
+    service: 'junias-new-test-app',
+    env: 'prod',
+    // Specify a version number to identify the deployed version of your application in Datadog
+    // version: '1.0.0',
+    sessionSampleRate: 100,
+    sessionReplaySampleRate: 20,
+    defaultPrivacyLevel: 'mask-user-input',
+});
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null);
