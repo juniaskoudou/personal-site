@@ -7,20 +7,21 @@ import Image from "next/image";
 import { animate, stagger } from "motion";
 import { useEffect, useRef } from "react";
 import { datadogRum } from '@datadog/browser-rum';
+import { reactPlugin } from '@datadog/browser-rum-react';
 
 datadogRum.init({
-    applicationId: '4248c229-1d15-495e-9dac-7937edbbba34',
-    clientToken: 'pubfd01821e68c40994e41ec72f04873fda',
-    // `site` refers to the Datadog site parameter of your organization
-    // see https://docs.datadoghq.com/getting_started/site/
+    applicationId: 'f177ee7d-58ae-4b4c-8008-92a7ffbe7ff7',
+    clientToken: 'pub2e1da83f7094d5a613a3da41f2324800',
     site: 'datadoghq.com',
-    service: 'junias-new-test-app',
+    service:'home',
     env: 'prod',
+    
     // Specify a version number to identify the deployed version of your application in Datadog
     // version: '1.0.0',
-    sessionSampleRate: 100,
+    sessionSampleRate:  100,
     sessionReplaySampleRate: 20,
-    defaultPrivacyLevel: 'mask-user-input',
+    defaultPrivacyLevel: 'allow',
+    plugins: [reactPlugin({ router: false })],
 });
 
 export default function Home() {
