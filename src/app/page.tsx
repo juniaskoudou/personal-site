@@ -140,7 +140,13 @@ export default function Home() {
               <div className="flex gap-2 button-group">
                 <Button
                   className="cursor-pointer"
-                  onClick={() => window.open("mailto:juniashk@gmail.com", "_blank")}
+                  onClick={() => {
+                    datadogRum.addAction('email_clicked', {
+                      email: 'juniashk@gmail.com',
+                      location: 'homepage'
+                    });
+                    window.open("mailto:juniashk@gmail.com", "_blank");
+                  }}
                 >
                   Send an email
                 </Button>
@@ -149,6 +155,10 @@ export default function Home() {
                   size="icon"
                   variant="secondary"
                   onClick={() => {
+                    datadogRum.addAction('linkedin_clicked', {
+                      profile: 'Juniask',
+                      location: 'homepage'
+                    });
                     window.open(
                       "https://www.linkedin.com/in/Juniask/",
                       "_blank",
@@ -163,6 +173,10 @@ export default function Home() {
                   size="icon"
                   variant="secondary"
                   onClick={() => {
+                    datadogRum.addAction('instagram_clicked', {
+                      profile: 'junias.jpeg',
+                      location: 'homepage'
+                    });
                     window.open(
                       "https://www.instagram.com/junias.jpeg/",
                       "_blank",
