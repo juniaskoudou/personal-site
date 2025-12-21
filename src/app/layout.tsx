@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script defer data-domain="iamjunias.com" src="https://plausible.io/js/script.js"></script>
+        <script async src="https://cdn.visitors.now/v.js" data-token="90c2ad31-5815-4240-bda5-d93ddebf8a27"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
