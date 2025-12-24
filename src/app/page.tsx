@@ -6,23 +6,6 @@ import { Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { animate, stagger } from "motion";
 import { useEffect, useRef } from "react";
-import { datadogRum } from '@datadog/browser-rum';
-import { reactPlugin } from '@datadog/browser-rum-react';
-
-datadogRum.init({
-    applicationId: 'f177ee7d-58ae-4b4c-8008-92a7ffbe7ff7',
-    clientToken: 'pub2e1da83f7094d5a613a3da41f2324800',
-    site: 'datadoghq.com',
-    service:'home',
-    env: 'prod',
-    
-    // Specify a version number to identify the deployed version of your application in Datadog
-    // version: '1.0.0',
-    sessionSampleRate:  100,
-    sessionReplaySampleRate: 20,
-    defaultPrivacyLevel: 'allow',
-    plugins: [reactPlugin({ router: false })],
-});
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -192,7 +175,7 @@ export default function Home() {
             <div className="w-full flex flex-col space-y-4 sm:space-y-6 text-primary sm:text-[26px] text-lg font-medium tracking-tight">
               <p className="bio-paragraph">
                 Welcome to my digital space. Here you&apos;ll find my design project, photos and
-                thoughts on various topics.
+                thoughts on various topics. (soon)
               </p>
               <p className="bio-paragraph">
                 As for me, I am passionate about design and tech in general. I came across
@@ -207,7 +190,7 @@ export default function Home() {
               <p className="bio-paragraph">
                 I love crafting aesthetic and highly functional web software and mobile apps. I
                 believe that creativity, combined with consistency and iteration, is key to creating
-                meaningful experiences for humans.
+                meaningful user experiences.
               </p>
               <p className="bio-paragraph">
                 In late 2023, I started investing in my passion for photography. I quickly fell in
